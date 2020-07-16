@@ -1,7 +1,4 @@
-<?php
-include __DIR__ . '/database.php';
-
-?>
+<?php include __DIR__ . '/database.php'; ?>
 
 
 <!DOCTYPE html>
@@ -23,7 +20,14 @@ include __DIR__ . '/database.php';
 
       <main>
         <div class="container">
-
+          <?php foreach($database as $album) { ?>
+            <div class="album">
+              <img src="<?php echo $album['poster']; ?>" alt="Album cover">
+              <h3><?php echo $album['title']; ?></h3>
+              <span><?php echo $album['author']; ?></span><br>
+              <span><?php echo $album['year']; ?></span>
+            </div>
+          <?php } ?>
         </div>
       </main>
     </div>

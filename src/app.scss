@@ -20,10 +20,32 @@ header {
 
 main {
   background-color: $primary_color;
-  height: calc(100% - $header_height);
+  height: calc(100vh - #{$header_height});
+  overflow-y: auto;
+  color: $third_color;
 
   .container {
-    width: 80%;
+    width: 65%;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    // text-align: center;
+
+    .album {
+      height: 150px;
+      width: calc(100% / 4);
+      background-color: #2e3a46;
+      text-align: center;
+
+      img {
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      h3 {
+        color: white;
+        text-transform: uppercase;
+      }
+    }
   }
 }
