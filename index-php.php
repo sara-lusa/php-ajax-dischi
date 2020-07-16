@@ -11,7 +11,10 @@
   </head>
   <body>
 
+    <!-- Inizio Wrapper  -->
     <div class="wrapper">
+
+      <!-- Inizio Header  -->
       <header>
         <div class="container">
           <div class="logo">
@@ -19,9 +22,13 @@
           </div>
         </div>
       </header>
+      <!-- Fine Header  -->
 
+      <!-- Inizio Main  -->
       <main>
         <div class="container">
+
+          <!-- Album -->
           <?php foreach($database as $album) { ?>
             <div class="album">
               <img src="<?php echo $album['poster']; ?>" alt="Album cover">
@@ -30,8 +37,11 @@
               <span><?php echo $album['year']; ?></span>
             </div>
           <?php } ?>
+          <!-- Fine Album -->
+
         </div>
       </main>
+      <!-- Fine Main  -->
     </div>
 
   </body>

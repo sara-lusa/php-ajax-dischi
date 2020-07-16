@@ -19,6 +19,26 @@ body {
   display: flex;
 }
 
+.album {
+  height: 300px;
+  width: calc(100% / 5);
+  background-color: #2e3a46;
+  text-align: center;
+  padding: 20px 5px 0 5px;
+  margin: 20px 14px;
+}
+
+.album img {
+  width: 65%;
+  margin: 0 auto;
+}
+
+.album h3 {
+  color: white;
+  text-transform: uppercase;
+  margin: 20px 0 10px 0px;
+}
+
 header {
   background-color: #2e3a46;
   height: 50px;
@@ -43,25 +63,5 @@ main {
 main .container {
   flex-wrap: wrap;
   justify-content: center;
-}
-
-main .container .album {
-  height: 300px;
-  width: calc(100% / 5);
-  background-color: #2e3a46;
-  text-align: center;
-  padding: 20px 5px 0 5px;
-  margin: 20px 14px;
-}
-
-main .container .album img {
-  width: 65%;
-  margin: 0 auto;
-}
-
-main .container .album h3 {
-  color: white;
-  text-transform: uppercase;
-  margin: 20px 0 10px 0px;
 }
 

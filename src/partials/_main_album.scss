@@ -1,0 +1,19 @@
+.album {
+  height: 300px;
+  width: calc(100% / 5);
+  background-color: #2e3a46;
+  text-align: center;
+  padding: 20px 5px 0 5px;
+  margin: 20px 14px;
+
+  img {
+    width: 65%;
+    margin: 0 auto;
+  }
+
+  h3 {
+    color: white;
+    text-transform: uppercase;
+    margin: 20px 0 10px 0px;
+  }
+}
