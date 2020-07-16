@@ -13,8 +13,10 @@
 
     <div class="wrapper">
       <header>
-        <div class="logo">
-          <img src="" alt="">
+        <div class="container">
+          <div class="logo">
+            <img src="img/logo.png" alt="Logo Spotify">
+          </div>
         </div>
       </header>
 
