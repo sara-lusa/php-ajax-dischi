@@ -14,15 +14,19 @@ include __DIR__ . '/database.php';
   </head>
   <body>
 
-    <header>
-      <div class="logo">
-        <img src="" alt="">
-      </div>
-    </header>
+    <div class="wrapper">
+      <header>
+        <div class="logo">
+          <img src="" alt="">
+        </div>
+      </header>
 
-    <main>
+      <main>
+        <div class="container">
 
-    </main>
+        </div>
+      </main>
+    </div>
 
   </body>
 </html>
