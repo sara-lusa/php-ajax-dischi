@@ -1,0 +1,17 @@
+@import 'partials/_variables';
+@import 'partials/_mixin';
+@import 'partials/_common';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: $secondary_color;
+}
+
+main {
+  background-color: $primary_color;
+}
