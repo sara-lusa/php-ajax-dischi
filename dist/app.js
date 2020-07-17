@@ -16105,7 +16105,20 @@ $(document).ready(function () {
   });
   $('.select-author').change(function () {
     var valOption = $(this).val();
-    console.log(valOption);
+    $.ajax({
+      url: 'http://localhost:8888/php-ajax-dischi/api.php',
+      method: 'GET',
+      data: {
+        autore: valOption
+      },
+      success: function success(dataResponse) {
+        console.log(dataResponse); // printSelectOptions(dataResponse);
+        // printCds(dataResponse);
+      },
+      error: function error() {
+        alert('Attenzione, non riesco a trovare il nome!');
+      }
+    });
   });
 }); // FUNCTIONS
 
