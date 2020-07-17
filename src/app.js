@@ -8,6 +8,7 @@ $(document).ready(function() {
       method: 'GET',
       success: function(dataResponse) {
 
+        printSelectOptions(dataResponse);
         printCds(dataResponse);
       },
       error: function() {
@@ -15,6 +16,13 @@ $(document).ready(function() {
       }
     }
   );
+
+  $('.select-author').change(function() {
+    var valOption = $(this).val();
+
+    console.log(valOption);
+  });
+
 
 });
 
@@ -26,6 +34,20 @@ function printCds(arrayCds) {
   for (var i = 0; i < arrayCds.length; i++) {
     var html = template(arrayCds[i]);
 
-    $('main .container').append(html);
+    $('.container-albums').append(html);
   }
 };
+
+function printSelectOptions(arrayCds) {
+  var source = $('#select-template').html();
+  var template = Handlebars.compile(source);
+
+  for (var i = 0; i < arrayCds.length; i++) {
+    var context = {
+      author: arrayCds[i].author
+    };
+    var html = template(context);
+
+    $('.select-author').append(html);
+  }
+}

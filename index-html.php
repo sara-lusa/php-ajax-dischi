@@ -1,6 +1,3 @@
-<?php include __DIR__ . '/database.php'; ?>
-
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -28,21 +25,31 @@
       <main>
         <div class="container">
 
-          <!-- Album -->
-          <?php foreach($database as $album) { ?>
-            <div class="album">
-              <img src="<?php echo $album['poster']; ?>" alt="Album cover">
-              <h3><?php echo $album['title']; ?></h3>
-              <span><?php echo $album['author']; ?></span><br>
-              <span><?php echo $album['year']; ?></span>
-            </div>
-          <?php } ?>
-          <!-- Fine Album -->
+          <select class="select-author">
+            <option value="All">All</option>
+          </select>
+
+          <div class="container-albums"></div>
 
         </div>
       </main>
       <!-- Fine Main  -->
     </div>
+
+    <script id="album-template" type="text/x-handlebars-template">
+      <div class="album">
+        <img src="{{poster}}" alt="Album cover">
+        <h3>{{title}}</h3>
+        <span>{{author}}</span><br>
+        <span>{{year}}</span>
+      </div>
+    </script>
+
+    <script id="select-template" type="text/x-handlebars-template">
+      <option value="{{author}}">{{author}}</option>
+    </script>
+
+    <script type="text/javascript" src="dist/app.js"></script>
 
   </body>
 </html>

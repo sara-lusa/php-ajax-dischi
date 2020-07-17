@@ -9,6 +9,7 @@ header {
   height: $header_height;
 
   .container {
+    @include display-flex;
     align-items: center;
     height: 100%;
 
@@ -25,7 +26,8 @@ main {
   overflow-y: auto;
   color: $third_color;
 
-  .container {
+  .container-albums {
+    @include display-flex;
     flex-wrap: wrap;
     justify-content: center;
   }

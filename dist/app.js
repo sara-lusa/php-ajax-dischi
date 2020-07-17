@@ -16096,11 +16096,16 @@ $(document).ready(function () {
     url: 'http://localhost:8888/php-ajax-dischi/api.php',
     method: 'GET',
     success: function success(dataResponse) {
+      printSelectOptions(dataResponse);
       printCds(dataResponse);
     },
     error: function error() {
       alert('Attenzione, il server non risponde!');
     }
+  });
+  $('.select-author').change(function () {
+    var valOption = $(this).val();
+    console.log(valOption);
   });
 }); // FUNCTIONS
 
@@ -16110,11 +16115,24 @@ function printCds(arrayCds) {
 
   for (var i = 0; i < arrayCds.length; i++) {
     var html = template(arrayCds[i]);
-    $('main .container').append(html);
+    $('.container-albums').append(html);
   }
 }
 
 ;
+
+function printSelectOptions(arrayCds) {
+  var source = $('#select-template').html();
+  var template = Handlebars.compile(source);
+
+  for (var i = 0; i < arrayCds.length; i++) {
+    var context = {
+      author: arrayCds[i].author
+    };
+    var html = template(context);
+    $('.select-author').append(html);
+  }
+}
 
 /***/ }),
 
