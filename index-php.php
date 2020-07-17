@@ -44,6 +44,15 @@
       <!-- Fine Main  -->
     </div>
 
+    <script id="album-template" type="text/x-handlebars-template">
+      <div class="album">
+        <img src="{{poster}}" alt="Album cover">
+        <h3>{{title}}</h3>
+        <span>{{author}}</span><br>
+        <span>{{year}}</span>
+      </div>
+    </script>
+
     <script type="text/javascript" src="dist/app.js"></script>
 
   </body>
